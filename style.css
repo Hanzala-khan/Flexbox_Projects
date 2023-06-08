@@ -1,0 +1,138 @@
+/* PRIMARY FONT */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+/* SECONDARY FONT */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Nunito+Sans:ital,opsz,wght@1,6..12,200&display=swap');
+
+/**********************  UNIVERSAL SETTINGS **********************/
+:root {
+    --primary-color: rgb(13, 24, 42);
+    --secondary-color: rgb(21, 37, 60);
+    --pirmary-font: 'Exo', sans-serif;
+    --secondary-font: 'Nunito Sans', sans-serif;
+    /*  TEXT COLORS  */
+    --primary-text-color: rgb(114, 150, 186);
+    --secondary-text-color:rgb(255,255,253);
+    --tertiary-text-color:rgb(76,201,203);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*  background-image: linear-gradient(to top left,var(--primary-color), var(--secondary-color));*/
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+/**********************************************
+            MAIN CONTAINER STYLING
+***********************************************/
+
+div.card_main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/**********************************************
+            CARD CONTENT STYLING
+***********************************************/
+
+div.card_content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/**********************************************
+            CARD IMG STYLING
+***********************************************/
+
+div.card_img>img {
+    max-width: 300px;
+}
+
+/**********************************************
+            CARD TITLE STYLING
+***********************************************/
+
+div.card_title {
+    padding: 10px 0;
+}
+div.card_title > h2{
+  font-family: var(--pirmary-font);
+  color: var(--secondary-text-color);
+}
+
+/**********************************************
+            CARD INFO STYLING
+***********************************************/
+
+div.card_info {
+  padding: 0px 0 5px 0;
+}
+div.card_info > p {
+  font-family: var(--secondary-font);
+  color: var(--primary-text-color);
+  font-weight: bolder;
+}
+
+/**********************************************
+            CARD PRICING TAG STYLING
+***********************************************/
+
+div.card_pricing_n_time {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.nft_price > :first-child{
+  color: var(--tertiary-text-color);
+  font-size: 1.3em;
+  padding: 0 5px 0 0 ;
+}
+div.nft_price > :last-child{
+  color: var(--tertiary-text-color);
+  font-family: var(--secondary-font);
+  font-weight: 900;
+}
+div.nft_time > :first-child{
+  color: var(--primary-text-color);
+  padding: 0 5px 0 0;
+}
+
+div.nft_time > :last-child{
+  color: var(--primary-text-color);
+  font-family: var(--pirmary-font);
+}
+
+/**********************************************
+            CARD CREATOR SECTION STYLING
+***********************************************/
+
+div.creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+div.creator > :nth-child(1) {
+  max-width: 30px;
+  border-radius: 50%;
+  border:2px solid whitesmoke;
+}
+
+div.creator > :nth-child(2){
+  padding: 0 0 0 20px;
+  font-family: var(--pirmary-font);
+  color: var(--primary-text-color);
+}
+div.creator > :nth-child(2) > :nth-child(n+1){
+  color: var(--secondary-text-color);
+}
